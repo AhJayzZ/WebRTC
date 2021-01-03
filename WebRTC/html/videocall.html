@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebRTC for Capstone</title>
+    <link rel="icon" type="image/x-icon" href="css/images/html_logo.png">
+
+
+    <!--JS腳本模組載入-->
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="lib/peer.min.js"></script>
+    <script src="lib/adapter-latest.js"></script>
+    <script src="lib/jquery-1.12.4.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+
+    <!--CSS樣式模本載入-->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/videocall.css" />
+</head>
+
+
+<body>
+    <table>
+        <tr>
+            <tr>
+                <!--選擇視訊鏡頭-->
+                <label for="videoSelect"><b><font size="4">視訊鏡頭來源:</font></b></label>
+                <select id="videoSelect" style="width:20%"></select>
+                <!--背景音樂選擇-->
+                <label for="musicSelect"><b><font size="4">背景音樂選擇:</font></b></label>
+                <select id="musicSelect" style="width: 20%;">
+                    <option value="default">請選擇您要唱的歌曲:</option>
+                    <option value="roof">屋頂</option>
+                    <option value="twotiger">童謠:兩隻老虎</option>
+                    <option value="anthem">中華民國國歌</option>
+                 </select>
+                <label for="filterSelect"><b><font size="4">濾鏡選擇:</font></b></label>
+                <select id="filter" style="width: 20%;">
+                    <option value="none">預設(無)</option>
+                    <option value="blur">Blur模糊濾鏡</option>
+                    <option value="grayscale">Grayscale灰階濾鏡</option>
+                    <option value="invert">Invert色調反向濾鏡</option>
+                    <option value="sepia">Sepia棕褐色濾鏡</option>
+                    <option value="brightness">Brightness亮度增強濾鏡</option>
+                    <option value="saturate">Saturate飽和100%濾鏡</option>
+                </select>
+            </tr>
+        </tr>
+        <tr>
+            <td><video id="localVideo" autoplay controls muted></video></td>
+            <td><video id="remoteVideo" autoplay controls></video></td>
+            <td>
+                <div id="chatbox"> </div>
+            </td>
+        </tr>
+
+        <td>
+            <div id="lyris"></div>
+        </td>
+        <td>
+            <!--視訊開始按鈕-->
+            <button id="btnStart"></button>
+        </td>
+        <td align="center" id="StreamerLabel"><b>實況主</b></td>
+        <td align="center" id="AudienceLabel"><b>觀眾</b></td>
+        <td align="center" id="ChatLabel"><b>聊天室</b></td>
+    </table>
+
+    <!--Call對方時等待回應的Message-->
+    <div id="dialog-confirm" title="accept video call?">
+        <p>
+            <span class="ui-icon ui-icon-info" style="float:left; margin:12px 12px 20px 0;"></span><label id="lblFrom"></label> is calling you, do you accept?
+        </p>
+    </div>
+    <!--最後載入videocall.js來執行視訊，若先載入則會Error，故放在最後載入-->
+    <script src="js/videocall.js"></script>
+</body>

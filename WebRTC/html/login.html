@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登入介面</title>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body>
+    <form>
+        <div id="log_image">
+            <div id="titel_text">
+                <!--logo picture-->
+                <img id=titel_img src="https://i.imgur.com/OMB2znC.jpg">
+                <!--spongebob picture-->
+                <img id=spongebob_img src="https://i.imgur.com/COhIvMk.gif">
+            </div>
+
+            <div id="text_box">
+                <div>
+                    <font size="5" id="SelfLabel">註冊Self ID:</font><br>
+                    <input type="text" id="txtSelfId" />
+                </div>
+                <div>
+                    <font size="5" id="TargetLabel">呼叫Target ID:</font><br>
+                    <input type="text" id="txtTargetId" />
+                </div>
+                <div id="container">
+                    <input type="button" value="登入" id="btnLogin" onclick="LoginClick()">
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+
+</html>
