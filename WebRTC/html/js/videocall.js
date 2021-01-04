@@ -175,6 +175,7 @@ window.onload = function() {
                 }
                 //接受视频通话邀请
                 if (msg.action === "accept") {
+                    document.getElementById("lyris").innerHTML = '<iframe id="lyris" width="300" volume="100" height="150" src=' + musicLink + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
                     console.log("accept call => " + JSON.stringify(msg));
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function(stream) {
@@ -186,6 +187,7 @@ window.onload = function() {
 
                 //接受视频通话邀请后，通知另一端    
                 if (msg.action === "accept-ok") {
+                    document.getElementById("lyris").innerHTML = '<iframe id="lyris" width="300" volume="100" height="150" src=' + musicLink + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
                     console.log("accept-ok call => " + JSON.stringify(msg));
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function(stream) {
@@ -200,7 +202,6 @@ window.onload = function() {
     btnStart.onclick = function() {
         //放音樂
         sendMessage(txtSelfId, txtTargetId, "call"); //若註冊完則Call
-        document.getElementById("lyris").innerHTML = '<iframe id="lyris" width="300" volume="100" height="150" src=' + musicLink + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     }
 
     videoSelect.onchange = start;
