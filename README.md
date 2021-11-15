@@ -39,3 +39,10 @@
 ## 參考 Reference
 
 - [WebRTC結合PeerJS](https://www.cnblogs.com/yjmyzz/p/peerjs-tutorial.html)
+
+----------------------------------------
+### 待整理 Unfinished
+
+node server.js
+如果提示缺少包，可通過 cnpm(或npm) install serve-index peer 安裝
+啟用成功後，瀏覽https://localhost:81/ 即可
