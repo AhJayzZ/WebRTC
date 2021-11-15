@@ -1,0 +1,100 @@
+    body {
+        background-image: url(https://i.imgur.com/EJJFwPv.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #lyris {
+        width: 400px;
+        height: 200px;
+        margin-left: 25px;
+        margin-top: 230px;
+    }
+    
+    #btnStart {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: transparent;
+        background-image: url(https://i.imgur.com/NCm2qVg.png);
+        height: 100px;
+        width: 300px;
+        margin-left: 250px;
+        margin-top: 280px;
+    }
+    /*實況主、觀眾Label*/
+    
+    #StreamerLabel {
+        font-size: 40px;
+        position: absolute;
+        margin-top: -10px;
+        margin-left: -220px;
+    }
+    
+    #AudienceLabel {
+        font-size: 40px;
+        position: absolute;
+        margin-top: -10px;
+        margin-left: 370px;
+    }
+    /*視訊*/
+    
+    #localVideo {
+        position: absolute;
+        margin-top: 50px;
+        width: 500px;
+        height: 400px;
+    }
+    
+    #remoteVideo {
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 500px;
+        height: 400px;
+    }
+    /*聊天室*/
+    
+    #chat {
+        position: absolute;
+        margin-left: 650px;
+        margin-top: 50px;
+        width: 400px;
+        height: 600px;
+    }
+    
+    #ChatLabel {
+        font-size: 40px;
+        position: absolute;
+        margin-top: -10px;
+        margin-left: 800px;
+    }
+    /*濾鏡*/
+    
+    .none {
+        filter: none;
+    }
+    
+    .blur {
+        filter: blur(5px);
+    }
+    
+    .grayscale {
+        filter: grayscale(1);
+    }
+    
+    .invert {
+        filter: invert(1);
+    }
+    
+    .sepia {
+        filter: sepia(1);
+    }
+    
+    .saturate {
+        filter: saturate(100);
+    }
+    
+    .brightness {
+        filter: brightness(2);
+    }

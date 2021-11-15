@@ -26,7 +26,7 @@ musicSelect.onclick = function() {
 }
 
 function changeChatboxIP() {
-    document.getElementById("chatbox").innerHTML = '<iframe src="https://' + getIP + ':3000/" id="chat" scrolling="yes"></iframe>';
+    document.getElementById("chatbox").innerHTML = '<iframe src="https://' + getIP + ':4000/" id="chat" scrolling="yes"></iframe>';
 } //改IP
 
 filter.addEventListener('change', () => { localVideo.className = filter.value; });
