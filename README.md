@@ -1,6 +1,5 @@
 # WebRTC直播平台 WebRTC Streaming
 
-## ★★★★★年久失修有Bug(未修復)★★★★★
 ## 簡介 Introduction
 這是大三上學期修的一堂Capstone課程所製作的期末專題，主要功能是要求一位直播主和一位觀眾視訊對唱歌，**採用WebRTC結合PeerJS來實現直播主與觀眾雙方p2p的視訊功能。**，除此之外，**也利用了Socket.io製作了一個多人聊天室**提供聊天功能，伺服器使用課程提供的AWS EC2服務。
 
